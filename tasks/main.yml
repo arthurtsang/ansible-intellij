@@ -1,0 +1,13 @@
+---
+
+- name: install jdk
+  apt:
+    name: default-jdk
+    state: latest
+
+- name: install intellij
+  unarchive:
+    src: https://download.jetbrains.com/idea/ideaIC-2021.2.tar.gz
+    dest: /usr/local/bin
+    remote_src: yes
+    creates: /usr/local/bin/idea-IC-212.4746.92/
